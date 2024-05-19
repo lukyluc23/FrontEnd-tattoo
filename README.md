@@ -1,8 +1,8 @@
-# Tatto Frontend
+# Tatto Frontend 💉💉
 
 This frontend interacts with backend in order to compose a fullstack app, featuring authentication, appointment.
 
-## Stack 🛠️
+## Stack ⚙
 
 [![React Badge](https://img.shields.io/badge/-React-61DBFB?style=for-the-badge&labelColor=black&logo=react&logoColor=61DBFB)](#) [![Javascript Badge](https://img.shields.io/badge/-Javascript-F0DB4F?style=for-the-badge&labelColor=black&logo=javascript&logoColor=F0DB4F)](#) [![Typescript Badge](https://img.shields.io/badge/-Typescript-007acc?style=for-the-badge&labelColor=black&logo=typescript&logoColor=007acc)](#) [![Nodejs Badge](https://img.shields.io/badge/-Nodejs-3C873A?style=for-the-badge&labelColor=black&logo=node.js&logoColor=3C873A)](#)
 
@@ -18,13 +18,13 @@ This frontend interacts with backend in order to compose a fullstack app, featur
 Get a copy of the project up and running on your local machine for development and testing purposes.
 
 ```sh
-git clone
-cd
+git clone https://github.com/lukyluc23/FrontEnd-tattoo.git
+cd FrontEnd-tattoo-main
 npm install
 npm run dev
 ```
 
-## App pages / routes 📑
+## App pages / routes 🚙
 
 - `/`
   - Landing page
@@ -38,7 +38,7 @@ npm run dev
 - `/admin/users` - Users
 - `/admin/appointments` - Appointments
 
-## Author ✒️
+## Author
 
 - **Lucas Fabio**
   - [GitHub](https://github.com/lukyluc23)
