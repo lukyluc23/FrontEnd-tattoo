@@ -1,0 +1,22 @@
+.about-container {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 90vh;
+  width: auto;
+}
+
+h2 {
+  color: #222222d7;
+  font-weight: bold;
+}
+
+.img-responsive {
+  height: 300px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  filter: blur(1);
+}
