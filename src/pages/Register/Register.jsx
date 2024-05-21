@@ -16,10 +16,11 @@ export const Register = () => {
   });
   const [isValidContent, setIsValidContent] = useState({
     email: "",
+    firstName: "",
     password: "",
   });
   const inputValidatorHandler = (e) => {
-    const errorMessage = inputValidator(e.target.value, e.target.firstName);
+    const errorMessage = inputValidator(e.target.value, e.target.name);
     setIsValidContent((prevState) => ({
       ...prevState,
       [e.target.name]: errorMessage,
@@ -29,8 +30,6 @@ export const Register = () => {
   const [msg, setMsg] = useState("");
 
   const inputHandler = (e) => {
-    //genero la función que bindea
-
     setCredentials((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
@@ -38,23 +37,14 @@ export const Register = () => {
   };
 
   const registerMe = async () => {
-    if (
-      inputValidator(credentials.firstName, "name") &&
-      inputValidator(credentials.password, "password")
-    ) {
-      const answer = await registerNewUserCall(credentials);
-      console.log(answer);
-      setMsg(answer.data.message);
+    const answer = await registerNewUserCall(credentials);
+    console.log(answer);
+    setMsg(answer.data.message);
 
-      if (answer.data.email) {
-        setTimeout(() => {
-          navigate("/login");
-        }, 2000);
-      }
-    } else {
-      console.log(
-        "credenciales incorrectas, algún campo no está bien introducido"
-      );
+    if (answer.data.email) {
+      setTimeout(() => {
+        navigate("/login");
+      }, 2000);
     }
   };
 
@@ -66,7 +56,7 @@ export const Register = () => {
             <h1>CREATE YOUR ACCOUNT</h1>
             <InputC
               typeProp={"text"}
-              nameProp={"name"}
+              nameProp={"Name"}
               handlerProp={(e) => inputHandler(e)}
               placeholderProp={"escribe tu nombre"}
               onBlurHandler={(e) => inputValidatorHandler(e)}

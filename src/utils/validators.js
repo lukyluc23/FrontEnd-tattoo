@@ -16,13 +16,8 @@ export const inputValidator = (inputValue, inputName) => {
   ) {
     return "introduce un email válido";
   }
-  if (
-    inputName === "name" &&
-    (inputValue.length <= 3 ||
-      inputValue.includes(".") ||
-      inputValue.includes("@"))
-  ) {
-    return "introduce un nombre válido";
-  }
+  // if (inputName === "firstName") {
+  //   return "introduce un nombre válido";
+  // }
   return "";
 };
